@@ -1,0 +1,205 @@
+
+/* TIXWIX PREMIUM NAVBAR */
+
+.heyeve-navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(8, 10, 19, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.heyeve-nav-container {
+  max-width: 1440px;
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.heyeve-nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.heyeve-nav-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #078cc2,
+    #8452da 55%,
+    #ed2a9d
+  );
+}
+
+.heyeve-nav-brand-name {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 850;
+  letter-spacing: -0.7px;
+}
+
+.heyeve-nav-brand-name span {
+  color: #ef329d;
+}
+
+.heyeve-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+}
+
+.heyeve-nav-link {
+  position: relative;
+  padding: 9px 0;
+  color: #b8c0d3;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.heyeve-nav-link:hover,
+.heyeve-nav-link.active {
+  color: #ffffff;
+}
+
+.heyeve-nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #1699d5,
+    #e42d9c
+  );
+}
+
+.heyeve-organizer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 19px;
+  border-radius: 11px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  background: linear-gradient(
+    110deg,
+    #078cc2,
+    #8051dc 55%,
+    #ed2d9a
+  );
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.heyeve-organizer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 25px rgba(192, 51, 175, 0.22);
+}
+
+.heyeve-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+  .heyeve-nav-container {
+    min-height: 68px;
+    padding: 0 20px;
+  }
+
+  .heyeve-menu-toggle {
+    display: flex;
+  }
+
+  .heyeve-nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 20px;
+    background: #0b0e1b;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 24px 40px rgba(0,0,0,0.3);
+  }
+
+  .heyeve-nav-links.is-open {
+    display: flex;
+  }
+
+  .heyeve-nav-link {
+    padding: 12px 10px;
+  }
+
+  .heyeve-nav-link.active::after {
+    left: 10px;
+    right: auto;
+    width: 32px;
+  }
+
+  .heyeve-organizer-btn {
+    margin-top: 8px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heyeve-nav-logo {
+    width: 39px;
+    height: 39px;
+  }
+
+  .heyeve-nav-brand-name {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heyeve-nav-link,
+  .heyeve-organizer-btn {
+    transition: none;
+  }
+}
+
+/* Tixwix supplied logo, adapted for the dark brand palette */
+.heyeve-nav-logo { background: transparent; width: 46px; height: 46px; border-radius: 0; }
+.heyeve-nav-logo img { display:block; width:100%;height:100%;object-fit:contain; }
+.heyeve-nav-brand-name { display:inline-flex;align-items:center; }
+.heyeve-nav-brand-name img {display:block;width:142px;max-height:34px;object-fit:contain;}
+@media(max-width:480px){.heyeve-nav-brand-name img{width:116px}.heyeve-nav-logo{width:37px;height:37px}}

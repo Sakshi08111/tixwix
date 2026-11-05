@@ -1,0 +1,22 @@
+{
+  "name": "tixwix",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
+    "@vitejs/plugin-react": "latest",
+    "dotenv": "^18.0.9",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "resend": "^6.37.0",
+    "vite": "latest"
+  }
+}

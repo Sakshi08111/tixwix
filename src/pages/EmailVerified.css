@@ -1,0 +1,154 @@
+
+/* TIXWIX — EMAIL VERIFICATION PAGE */
+
+.verified-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(
+      ellipse at 20% 15%,
+      rgba(24, 126, 221, 0.15),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 85% 80%,
+      rgba(234, 40, 151, 0.13),
+      transparent 45%
+    ),
+    #090d19;
+  color: #ffffff;
+}
+
+.verified-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 54px 38px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  background: rgba(20, 23, 40, 0.92);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+  animation: verifiedFadeIn 0.6s ease both;
+}
+
+.verified-card h1 {
+  margin: 20px 0 12px;
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+.verified-card p {
+  max-width: 410px;
+  margin: 0 auto 30px;
+  color: #b4bdd1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.verified-kicker {
+  display: block;
+  margin-top: 22px;
+  color: #ec6db8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.verified-success-icon {
+  color: #4ade80;
+  filter: drop-shadow(0 0 20px rgba(74, 222, 128, 0.25));
+}
+
+.verified-info-icon {
+  color: #60a5fa;
+}
+
+.verified-error-icon {
+  color: #fb7185;
+}
+
+.verified-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 50px;
+  padding: 14px 26px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(
+    110deg,
+    #078cc2 0%,
+    #7c4fe5 50%,
+    #ec2e9b 100%
+  );
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.verified-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(195, 51, 178, 0.25);
+}
+
+.verified-spinner {
+  color: #8b7cf6;
+  animation: verifiedRotate 1s linear infinite;
+}
+
+@keyframes verifiedFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes verifiedRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .verified-page {
+    padding: 24px 16px;
+  }
+
+  .verified-card {
+    padding: 40px 22px;
+    border-radius: 18px;
+  }
+
+  .verified-card p {
+    font-size: 14px;
+  }
+
+  .verified-button {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .verified-card,
+  .verified-spinner {
+    animation: none;
+  }
+
+  .verified-button {
+    transition: none;
+  }
+}
